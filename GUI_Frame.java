@@ -41,13 +41,16 @@ public class GUI_Frame extends JFrame{
 		drawingAndTypingPanel1 = new DrawingAndTypingPanel();
 		
 		ColorChooserPanel colorChooserJP = new ColorChooserPanel();
-//		JPanel eastJP = new JPanel(); 
+		JPanel eastJP = new JPanel(); 
 		JPanel westJP = new JPanel();
 		JPanel southJP = new JPanel();
 		
-//		eastJP.setLayout(new GridLayout(3,1));
+		eastJP.setLayout(new GridLayout(3,1));
 		westJP.setLayout(new GridLayout(3,1));
 		southJP.setLayout(new GridLayout(2,1));
+		
+		JPanel spaceHolder = new JPanel(); 
+		eastJP.add(spaceHolder);
 		
 		ShapeSelectionPanel shapeSelectionPanel = new ShapeSelectionPanel();
 		SizeSelectionPanel sizeSelectionPanel = new SizeSelectionPanel();
@@ -56,6 +59,7 @@ public class GUI_Frame extends JFrame{
 		westJP.add(shapeSelectionPanel);
 		westJP.add(sizeSelectionPanel);
 		westJP.add(brushSelectionPanel);
+	
 		
 //		JLabel displayCoords = drawingAndTypingPanel1.displayCoords;
 //		southJP.add(displayCoords);
@@ -66,7 +70,7 @@ public class GUI_Frame extends JFrame{
 		mainJP.add(colorChooserJP, BorderLayout.NORTH);	
 		mainJP.add(westJP, BorderLayout.WEST);
 		mainJP.add(southJP, BorderLayout.SOUTH);
-//		mainJP.add(eastJP, BorderLayout.EAST);
+		mainJP.add(eastJP, BorderLayout.EAST);
 //		mainJP.add(drawingPanel1, BorderLayout.CENTER);
 //		mainJP.add(drawingPanel2);
 		mainJP.add(drawingAndTypingPanel1, BorderLayout.CENTER);
@@ -236,15 +240,5 @@ public class GUI_Frame extends JFrame{
 			add(displayCoords);
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }
