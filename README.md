@@ -1,0 +1,2 @@
+# PaintTool
+Simple paint tool
